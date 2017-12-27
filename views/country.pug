@@ -1,0 +1,28 @@
+h3 Code: #{country.Code}
+h3 Name: #{country.Name}
+h3 Continent: #{country.Continent}
+h3 Region: #{country.Region}
+h3 SurfaceArea: #{country.SurfaceArea}
+h3 IndepYear: #{country.IndepYear}
+h3 Population: #{country.Population}
+h3 LifeExpectancy: #{country.LifeExpectancy}
+h3 GNP: #{country.GNP}
+h3 GNPOld: #{country.GNPOld}
+h3 LocalName: #{country.LocalName}
+h3 GovernmentForm: #{country.GovernmentForm}
+h3 HeadOfState: #{country.HeadOfState}
+h3 Capital:
+a(href=`/cities/${country['cities.ID']}`)= country['cities.Name']
+h3 Code2: #{country.Code2}
+h3 Cities:
+each city in biggestCities
+    a(href=`/cities/${city.ID}`)= city.Name + " Population: " + city.Population
+    br
+
+h3 Languages:
+each language in languages
+    p= "Name: " + language.Language
+    p= "Number: " + language.Percentage * country.Population
+    p= "Percentage: " + language.Percentage
+    p= "Official language: " + language.IsOfficial
+    |--------------------------
