@@ -1,0 +1,20 @@
+{
+	"db": {
+		"database": "world",
+		"user": "root",
+		"password": "root",
+		"options": {
+			"host": "localhost",
+			"dialect": "mysql",
+			"define": {
+				"timestamps": false,
+				"paranoid": true
+			},
+			"pool": {
+				"max": 100,
+				"min": 0,
+				"idle": 10000
+			}
+		}
+	}
+}
