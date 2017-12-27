@@ -1,0 +1,11 @@
+{
+    "name": "cwp-20",
+    "author": "Egwinn",
+    "dependencies": {
+        "express": "^4.16.2",
+        "lodash": "^4.17.4",
+        "mysql2": "^1.5.1",
+        "pug": "^2.0.0-rc.4",
+        "sequelize": "^4.28.6"
+    }
+}
