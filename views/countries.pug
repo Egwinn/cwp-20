@@ -1,0 +1,14 @@
+h1 Countries : #{firstId}-#{lastId}
+
+ul
+	each countrie, index in countries
+		li
+			a(href="/countries/" + countrie.Code) #{countrie.Name}
+
+ul
+	each pageNumber, index in pageArray
+		if pageNumber != currentPage
+			li(style="display: inline-block; font-size: 1.5em; padding: 10px; border: 1px solid black; ")
+				a(href="/countries.html?page=" + pageNumber) #{pageNumber}
+		else
+			li(style="color:red; display: inline-block; font-size: 1.5em; padding: 10px; border: 1px solid black;") #{pageNumber}
